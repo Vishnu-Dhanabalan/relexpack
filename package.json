@@ -10,8 +10,15 @@
     "dev": "npm run dev-build && electron .",
     "package": "npm run prod-build && electron-packager ./ --out=electron-build --overwrite"
   },
-  "keywords": [],
-  "license": "ISC",
+  "repository": "https://github.com/Vishnu-Dhanabalan/relexpack",
+  "keywords": [
+    "react",
+    "electron",
+    "express",
+    "webpack",
+    "boilerplate"
+  ],
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.4",
     "react": "^16.7.0",
