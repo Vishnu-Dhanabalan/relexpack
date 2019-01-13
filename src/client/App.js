@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import "./styles/fonts.css";
 
-const StyledComponent = styled.h1`
+const StyledHeader = styled.h1`
   color: red;
+  font-family: ReemKufiRegular;
 `;
 
 const App = () => {
   return (
     <div>
-      <StyledComponent>Hello from React!</StyledComponent>
+      <StyledHeader>Hello from React!</StyledHeader>
     </div>
   );
 };
