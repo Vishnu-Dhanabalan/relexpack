@@ -1,8 +1,10 @@
-#### RELEXPACK - React Electron Express Webpack boilerplate
+### **RELEXPACK - React Electron Express Webpack boilerplate**
 
 ---
 
 This is a minimalistic boilerplate for developing desktop applications using Electron and ReactJS, along with ExpressJS and Webpack.
+
+This is built on top of [rexpack](https://github.com/bengrunfeld/rexpack), with some changes to accomodate Electron.
 
 #### Usage
 
