@@ -40,8 +40,20 @@ module.exports = {
         ]
       },
       {
-        test: /s\.css$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          }
+        ]
+      },
+      {
+        // Loads font files
+        test: /\.(ttf|otf)$/,
+        use: ["url-loader"]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
