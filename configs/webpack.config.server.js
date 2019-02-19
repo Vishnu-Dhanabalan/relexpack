@@ -4,11 +4,7 @@ const nodeExternals = require("webpack-node-externals");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = (env, argv) => {
-  // This will be edited to choose server.dev.js or server.prod.js based on the mode
-  const SERVER_PATH =
-    argv.mode === "development"
-      ? "./src/server/server.dev.js"
-      : "./src/server/server.prod.js";
+  const SERVER_PATH = "./src/server/server.js";
 
   const TARGET =
     argv.mode === "development" ? "electron-renderer" : "electron-main";

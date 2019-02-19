@@ -5,8 +5,12 @@
   "description": "React Electron Express Webpack boilerplate",
   "main": "startelectron.js",
   "scripts": {
-    "dev-build": "rm -rf dist && webpack --mode development --config configs/webpack.config.server.js && webpack --mode development --config configs/webpack.config.dev.js",
-    "prod-build": "rm -rf dist && webpack --mode production --config configs/webpack.config.server.js && webpack --mode production --config configs/webpack.config.prod.js",
+    "dev-build": "rm -rf dist && cross-env NODE_ENV=development npm run dev-server-build && npm run dev-client-build",
+    "dev-server-build": "webpack --mode development --config configs/webpack.config.server.js",
+    "dev-client-build": "webpack --mode development --config configs/webpack.config.dev.js",
+    "prod-build": "rm -rf dist && cross-env NODE_ENV=production npm run prod-server-build && npm run prod-client-build",
+    "prod-server-build": "webpack --mode production --config configs/webpack.config.server.js",
+    "prod-client-build": "webpack --mode production --config configs/webpack.config.prod.js",
     "dev": "npm run dev-build && electron .",
     "package": "npm run prod-build && electron-packager ./ --out=electron-build --overwrite"
   },
@@ -30,6 +34,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
     "electron": "^4.0.1",
     "electron-packager": "^13.0.1",
